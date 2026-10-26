@@ -1,0 +1,93 @@
+<!-- Cria um campo de texto com várias linhas. -->
+<form action="">
+    <textarea name="descricao" cols="50" rows="20">Valor padrão vai aqui!!!</textarea>
+    <button>Enviar</button>
+</form>
+
+<!-- Cria um campo para selecionar uma data. -->
+<form action="">
+    <input type="date" name="data-inicio" />
+    <button>Enviar</button>
+</form>
+
+<!-- Cria uma lista suspensa para escolher o dia da semana. -->
+<form action="">
+     
+    <label for="dia-semana">Dia da semana</label>
+    <select id="dia-semana" name="dia-semana">
+        <option value="1">Domingo</option>
+        <option value="2">Segunda</option>
+        <option value="3">Terça</option>
+        <option value="4">Quarta</option>
+        <option value="5">Quinta</option>
+        <option value="6">Sexta</option>
+        <option value="7">Sábado</option>
+    </select>
+    <button>Enviar</button>
+</form>
+
+<!-- Cria campos de texto para preencher um formulário. -->
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Campo de Texto</title>
+    </head>
+    <body>
+        <form action="">
+             
+             
+
+
+            <input
+                type="text"
+                name="nome-completo-usuario"
+                placeholder="Informe o nome do usuário"
+                value=""
+                size="50"
+                required
+            />
+            <input
+                type="text"
+                name="logradouro"
+                placeholder="Informe o seu logradouro"
+                value=""
+                size="50"
+                required
+            />
+            <button>Enviar</button>
+        </form>
+    </body>
+</html>
+
+<!-- Envia uma pesquisa para o Google com os dados do formulário. -->
+<form action="https://google.com/search">
+    <input type="text" name="q" />
+    <select name="hl">
+        <option value="pt-br">Português</option>
+        <option value="en-us">Inglês</option>
+    </select>
+    <button>Enviar</button>
+</form>
+
+<!-- Agrupa campos de endereço com fieldset e legend. -->
+<form action="">
+    <fieldset>
+        <legend>Enderenço</legend>
+        <div>
+            <label for="logradouro">Logradouro</label>
+            <input id="logradouro" type="text" name="logradouro" required />
+            <label for="complemento">Complemento</label>
+            <input id="complemento" type="text" name="complemento" required />
+        </div>
+        <div>
+            <label for="bairro">Bairro</label>
+            <input id="bairro" type="text" name="bairro" required />
+            <label for="cidade">Cidade</label>
+            <input id="cidade" type="text" name="cidade" required />
+            <label for="estado">Estado</label>
+            <input id="estado" type="text" name="estado" required />
+        </div>
+    </fieldset>
+    <button>Enviar</button>
+</form>
+
