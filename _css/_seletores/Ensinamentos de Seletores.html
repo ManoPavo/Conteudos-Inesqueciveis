@@ -1,0 +1,244 @@
+<!-- Aplica estilos usando seletores de atributo. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Seletor de Atributo</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #222;
+                color: #fff;
+                text-align: center;
+                padding: 50px;
+            }
+
+            [lista] {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                margin-top: 20px;
+            }
+
+            a[href] {
+                text-decoration: none;
+                color: #3498db;
+                padding: 10px;
+                border: 2px solid transparent;
+                transition: 0.3s ease;
+            }
+
+            a[href^='https'] {
+                color: #28a745;
+                border: 2px solid #28a745;
+                border-radius: 5px;
+            }
+
+            a[href$='.pdf'] {
+                color: #e74c3c;
+                font-weight: bold;
+                border-bottom: 3px dotted #e74c3c;
+            }
+
+            a[href*='contato'] {
+                color: #fad69d;
+                background-color: #b55b11;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Seletor de Atributo</h1>
+
+        <div lista>
+            <a href="https://google.com" target="_blank">Link Seguro (https)</a><br />
+            <a href="documento.pdf" target="_blank">Baixar PDF</a><br />
+            <a href="contato.html">Entre em Contato</a><br />
+            <a href="http://site.com" target="_blank">Link Inseguro (http)</a>
+        </div>
+    </body>
+</html>
+
+<!-- Aplica estilos a elementos usando classes. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Seletor de Classe</title>
+        <style>
+            .escuro {
+                background-color: #000;
+                color: #fff;
+                padding: 50px;
+            }
+
+            .botao {
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                text-decoration: none;
+                font-size: 1em;
+                cursor: pointer;
+            }
+            
+            .azul {
+                background-color: #0c76bd;
+            }
+
+            .vermelho {
+                background-color: #dc143c;
+            }
+
+        </style>
+    </head>
+    <body class="escuro">
+        <a href="https://google.com" class="botao vermelho">Ir para o Google</a>
+        <a href="index.html" class="botao azul">Voltar</a>
+    </body>
+</html>
+
+<!-- Demonstra a prioridade e o conflito entre seletores CSS. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Conflito de Seletores</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #222;
+                color: #fff;
+                text-align: center;
+                padding: 50px;
+            }
+
+            .lista {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                margin-top: 20px;
+            }
+
+            .link {
+                color: #fff;
+            }
+
+            .botao {
+                text-decoration: none;
+                padding: 10px;
+                border: 2px solid transparent;
+                transition: 0.3s ease;
+            }
+
+            #comprar {
+                color: #28a745;
+                border: 2px solid #28a745;
+                border-radius: 5px;
+            }
+
+            .destaque {
+                color: #e74c3c;
+                border: 3px dotted #e74c3c;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body class="lista">
+        <h1>Conflito de Seletores</h1>
+        <button id="comprar" class="botao destaque">Comprar</button>
+
+        <a href="https://specificity.keegan.st/" target="_blank" class="link">Calculadora</a>
+    </body>
+</html>
+
+<!-- Aplica estilos usando o seletor de ID. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Seletor de ID</title>
+        <style>
+            body {
+                background-color: #000;
+                color: #fff;
+            }
+
+            #whatsapp-botao {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background-color: #25d366;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+            }
+
+            #whatsapp-botao img {
+                width: 35px;
+                height: 35px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Seletor de ID</h1>
+        <a id="whatsapp-botao" href="https://wa.me/SEUNUMERO" target="_blank">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                alt="WhatsApp"
+            />
+        </a>
+    </body>
+</html>
+
+<!-- Aplica estilos usando seletores de tag. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Seletor de TAG</title>
+        <style>
+            body {
+                background-color: #000;
+                color: #fff;
+            }
+
+            h1 {
+                background-color: #fff;
+                color: #000;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Seletor de TAG</h1>
+        <p>Isso é um teste!</p>
+    </body>
+</html>
+
+<!-- Apresenta exemplos de seletores CSS. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Seletores</title>
+    </head>
+    <body>
+        <h1>Seletores</h1>
+        <ul>
+            <li><a href="tag.html">Seletor de Tag</a></li>
+            <li><a href="classe.html">Seletor de Classe</a></li>
+            <li><a href="id.html">Seletor de ID</a></li>
+            <li><a href="atributo.html">Seletor de Atributo</a></li>
+            <li><a href="conflito.html">Conflito</a></li>
+        </ul>
+    </body>
+</html>
+
